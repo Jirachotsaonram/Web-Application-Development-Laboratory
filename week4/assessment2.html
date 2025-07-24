@@ -8,11 +8,11 @@
 </head>
 
 <body>
-    <form action="test.php" method="post">
+    <form action="assessment2.php" method="post">
         Text:
         <input type="text" name="text" /><br />
         Password:
-        <input type="password" name="password1" /><br />
+        <input type="password" name="password1" required /><br />
         Required Password:
         <input type="text" name="password2" required /><br />
         Textarea:
@@ -34,13 +34,21 @@
         </fieldset>
 
         <br /><br /><br />
-        <label for="phone">Phone Number (Format: (xxx)xxx-xxxx):</label>
-        <input type="tel" id="phone" name="phone" pattern="\(\d{3}\)\d{3}-\d{4}" placeholder="(098)893-9662" required />
-        <small>Example: (098)893-9662</small>
+        <div>
+            <label for="phone">Phone Number (Format: (xxx)xxx-xxxx):</label>
+            <input type="tel" id="phone" name="phone" pattern="\(\d{3}\)\d{3}-\d{4}" placeholder="(098)893-9662"
+                required />
+            <small>Example: (098)893-9662</small>
+        </div>
 
-        Email:
-        <input type="email" name="email" pattern=".+@email\.kmutnb\.ac\.th"
-            title="Please provide only email in ...@kmutnb.ac.th corporate email address" />
+        <div>
+            <label for="email">University Email:</label>
+            <input type="email" id="email" name="email"
+                pattern="^[a-zA-Z0-9._%+-]+@(email\.kmutnb\.ac\.th|itm\.kmutnb\.ac\.th)$"
+                placeholder="sXXXXXX@email.kmutnb.ac.th or your.name@itm.kmutnb.ac.th" size="80" required />
+
+        </div>
+
         Time:
         <input type="time" name="time" />
 
