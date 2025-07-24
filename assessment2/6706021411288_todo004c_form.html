@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำนวณค่าจ้างพนักงาน</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container {
+            width: 450px;
+            margin: 50px auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        td { padding: 8px; }
+        input[type="number"] { width: 80px; padding: 5px; }
+        .button-group { text-align: center; margin-top: 20px; }
+        .button-group button { padding: 8px 15px; margin: 0 5px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3 style="text-align: center;">คำนวณค่าจ้างพนักงาน 3 คน</h3>
+        <form action="6706021411288_todo004c_exec.php" method="post">
+            <table>
+                <tr>
+                    <td>ชั่วโมงทำงานพนักงาน 1:</td>
+                    <td><input type="number" name="hours[]" min="0" value="8" required> ชั่วโมง</td>
+                </tr>
+                <tr>
+                    <td>ชั่วโมงทำงานพนักงาน 2:</td>
+                    <td><input type="number" name="hours[]" min="0" value="10" required> ชั่วโมง</td>
+                </tr>
+                <tr>
+                    <td>ชั่วโมงทำงานพนักงาน 3:</td>
+                    <td><input type="number" name="hours[]" min="0" value="15" required> ชั่วโมง</td>
+                </tr>
+            </table>
+            <div class="button-group">
+                <button type="submit">คำนวณ</button>
+                <button type="reset">Clear</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
