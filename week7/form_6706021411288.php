@@ -11,7 +11,8 @@
             ]);
         } elseif (isset($_POST['update'])){
         $db->update(
-            ["name" => $_POST['name']],
+            ["name" => $_POST['name'],
+            "password" => $_POST['password']],
             ["id" => $_POST['id']]
         );
         } elseif (isset($_POST['delete'])) {
