@@ -91,6 +91,7 @@
             $sql = "SELECT * FROM {$this->table}";
             $params = [];
             if (!empty($where)) {
+                $wherePart = "";
                 foreach ($where as $key => $value) {
                     $wherePart .="$key =:$key AND ";
                 }
